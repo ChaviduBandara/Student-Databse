@@ -9,4 +9,6 @@ public interface StudentService {       // an interface cannot create objects.
     List<Student> getData();
 
     void addData(Student student);
+
+//    void deleteData(Integer id);
 }

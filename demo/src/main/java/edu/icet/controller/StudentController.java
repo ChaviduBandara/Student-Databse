@@ -25,4 +25,9 @@ public class StudentController {
     public void addData(@RequestBody Student student){  //student kenek add karanwa of type student
         service.addData(student);
     }
+
+//    @DeleteMapping("/delete-data/{id}")
+//    public void deleteData(@PathVariable Integer id){
+//        service.deleteData(id);
+//    }
 }
