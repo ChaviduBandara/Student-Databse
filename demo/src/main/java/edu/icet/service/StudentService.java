@@ -4,11 +4,15 @@ import edu.icet.dto.Student;
 
 import java.util.List;
 
-public interface StudentService {       // an interface cannot create objects.
+public interface StudentService {
 
-    List<Student> getData();
+    List<Student> getStudent();
 
-    void addData(Student student);
+    void addStudent(Student student);
 
-//    void deleteData(Integer id);
+    void deleteStudentById(Integer id);
+
+    void updateStudent(Student student);
+
+    List<Student> findByName(String name);
 }

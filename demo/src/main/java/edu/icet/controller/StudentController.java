@@ -7,25 +7,35 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
 @CrossOrigin
+@RestController
 public class StudentController {
 
     @Autowired
     StudentService service;
 
-    @GetMapping("/get-data")    //showing data
-    public List<Student> getData(){     //pathin add karapu studentwa pennawa
-        return service.getData();
+    @GetMapping("/get-student")
+    public List<Student> getStudent(){
+        return service.getStudent();
     }
 
-    @PostMapping("/add-data")   //adding data
-    public void addData(@RequestBody Student student){  //student kenek add karanwa of type student
-        service.addData(student);
+    @PostMapping("/add-student")
+    public void addStudent(@RequestBody Student student){
+        service.addStudent(student);
     }
 
-//    @DeleteMapping("/delete-data/{id}")
-//    public void deleteData(@PathVariable Integer id){
-//        service.deleteData(id);
-//    }
+    @DeleteMapping("/delete-student/{id}")
+    public void deleteStudentBYId(@PathVariable Integer id){
+        service.deleteStudentById(id);
+    }
+
+    @PutMapping("/update-student")
+    public void updateStudent(@RequestBody Student student){
+        service.updateStudent(student);
+    }
+
+    @GetMapping("/find-by-name/{name}")
+    public List<Student> findByName(@PathVariable String name){
+        return service.findByName(name);
+    }
 }
