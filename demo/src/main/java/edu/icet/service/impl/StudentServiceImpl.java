@@ -1,6 +1,7 @@
-package edu.icet.service;
+package edu.icet.service.impl;
 
 import edu.icet.dto.Student;
+import edu.icet.service.StudentService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
